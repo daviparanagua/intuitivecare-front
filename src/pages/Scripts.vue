@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-6">
         <q-card>
           <q-card-section>
-            <div class="text-h6">Ações frequentes</div>
+            <div class="text-h6">Scripts</div>
           </q-card-section>
           <q-card-section>
             <q-list bordered separator>
@@ -23,7 +23,8 @@
           O script selecionado está em execução...
         </q-card-section>
         <q-card-section v-else>
-          Status: {{status}}
+          <div>PID: {{result.pid}}</div>
+          <div>Status: {{result.status}}</div>
         </q-card-section>
       </q-card>
     </div>
@@ -39,15 +40,15 @@ export default {
   data: () => ({
     apiURL: 'http://localhost:3000',
     isRunning: false,
-    status: 'Aguardando'
+    result: 'Pronto'
   }),
   methods: {
     runScript (script) {
       this.isRunning = true
       this.$axios.get(this.apiURL + '/' + script).then((response) => {
-        this.status = response.data.status
+        this.result = response.data
       }).catch(() => {
-        this.status = { server: 'Offline', database: 'Desconhecido' }
+        this.result = { status: 'Erro' }
       }).finally(() => {
         this.isRunning = false
       })
