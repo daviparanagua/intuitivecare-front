@@ -45,7 +45,7 @@ export default {
   methods: {
     runScript (script) {
       this.isRunning = true
-      this.$axios.get(this.apiURL + '/' + script).then((response) => {
+      this.$axios.post(this.apiURL + '/' + script).then((response) => {
         this.result = response.data
       }).catch(() => {
         this.result = { status: 'Erro' }

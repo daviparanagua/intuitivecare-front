@@ -54,6 +54,15 @@
             <q-item-label caption>Visualizar logs de execuções de scripts</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item to="table" clickable tag="a">
+          <q-item-section avatar>
+            <q-icon name="list" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Tabela</q-item-label>
+            <q-item-label caption>Visualizar tabela com dados carregados</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
