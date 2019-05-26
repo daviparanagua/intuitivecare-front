@@ -66,6 +66,13 @@ module.exports = function (ctx) {
     supportIE: false,
 
     build: {
+      env: ctx.dev
+        ? { // so on dev we'll have
+          API: JSON.stringify('http://localhost:3000')
+        }
+        : { // and on build (production):
+          API: JSON.stringify('http://play.paradoxocg.com.br:3000')
+        },
       scopeHoisting: true,
       vueRouterMode: 'history',
       // vueCompiler: true,

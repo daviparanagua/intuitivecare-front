@@ -25,7 +25,7 @@
 export default {
   name: 'Logs',
   data: () => ({
-    apiURL: 'http://localhost:3000',
+    apiURL: process.env.API,
     runs: [],
     columns: [
       { name: 'pid', label: 'PID', field: 'pid', sortable: true },

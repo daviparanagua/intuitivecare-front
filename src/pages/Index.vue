@@ -45,7 +45,7 @@
 export default {
   name: 'PageIndex',
   data: () => ({
-    apiURL: 'http://localhost:3000',
+    apiURL: process.env.API,
     status: {
       server: 'Desconhecido',
       database: 'Desconhecido'
