@@ -1,29 +1,18 @@
 <template>
   <q-page class="q-pa-md row items-start q-col-gutter-md">
     <div class="col-xs-12 col-sm-6">
-        <q-card class="q-pa-md">
+        <q-card>
           <q-card-section>
-            <div class="text-h6">Our Changing Planet</div>
+            <div class="text-h6">Ações frequentes</div>
           </q-card-section>
-
           <q-card-section>
             <q-list bordered separator>
-              <q-item clickable v-ripple>
-                <q-item-section>Single line item</q-item-section>
+              <q-item to="/scripts" clickable v-ripple>
+                <q-item-section>Executar scripts</q-item-section>
               </q-item>
 
-              <q-item clickable v-ripple>
-                <q-item-section>
-                  <q-item-label>Item with caption</q-item-label>
-                  <q-item-label caption>Caption</q-item-label>
-                </q-item-section>
-              </q-item>
-
-              <q-item clickable v-ripple>
-                <q-item-section>
-                  <q-item-label overline>OVERLINE</q-item-label>
-                  <q-item-label>Item with caption</q-item-label>
-                </q-item-section>
+              <q-item to="/logs" clickable v-ripple>
+                <q-item-section>Visualizar logs</q-item-section>
               </q-item>
             </q-list>
           </q-card-section>
@@ -32,14 +21,14 @@
     <div class="col-xs-12 col-sm-6">
       <q-card>
         <q-card-section>
-          <div class="text-h6">Status do Servidor</div>
+          <div class="text-h6">Status do servidor</div>
         </q-card-section>
         <q-card-section>
           <q-list bordered separator>
-            <q-item clickable v-ripple>
+            <q-item v-ripple>
               <q-item-section>Status do servidor: {{status.server}}</q-item-section>
             </q-item>
-            <q-item clickable v-ripple>
+            <q-item v-ripple>
               <q-item-section>Status do banco de dados: {{status.database}}</q-item-section>
             </q-item>
           </q-list>
