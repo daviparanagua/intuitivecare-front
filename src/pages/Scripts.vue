@@ -10,6 +10,9 @@
               <q-item @click="runScript('q31')" clickable v-ripple :disable="isRunning">
                 <q-item-section>Carregar quadro 31</q-item-section>
               </q-item>
+              <q-item @click="runScript('s31')" clickable v-ripple :disable="isRunning">
+                <q-item-section>Sabotar quadro 31 (apaga o quadro)</q-item-section>
+              </q-item>
             </q-list>
           </q-card-section>
         </q-card>
