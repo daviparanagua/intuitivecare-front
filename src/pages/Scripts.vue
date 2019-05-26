@@ -27,6 +27,7 @@
         </q-card-section>
         <q-card-section v-else>
           <div>PID: {{result.pid}}</div>
+          <div>Script: {{result.script}}</div>
           <div>Status: {{result.status}}</div>
         </q-card-section>
       </q-card>
