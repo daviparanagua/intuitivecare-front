@@ -71,7 +71,7 @@ module.exports = function (ctx) {
           API: JSON.stringify('http://localhost:3000')
         }
         : { // and on build (production):
-          API: JSON.stringify('http://play.paradoxocg.com.br:3000')
+          API: JSON.stringify('https://play.paradoxocg.com.br:3000')
         },
       scopeHoisting: true,
       vueRouterMode: 'history',
