@@ -44,10 +44,10 @@ if (useSSL) {
   })
 }
 
-app.use(express.static('dist/pwa'))
+app.use(express.static('dist/spa'))
 
 app.use(function (req, res) {
-  res.sendFile('dist/pwa/index.html', { root: __dirname })
+  res.sendFile('dist/spa/index.html', { root: __dirname })
 })
 
 // Starting true server
